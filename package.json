@@ -1,6 +1,6 @@
 {
   "name": "rmlines",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Streaming line remover",
   "license": "MIT",
   "repository": "t1st3/rmlines",
@@ -23,7 +23,9 @@
     "remove",
     "stream"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "through2": "^2.0.1"
+  },
   "devDependencies": {
     "ava": "*",
     "concat-stream": "^1.5.2",
