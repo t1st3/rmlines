@@ -1,0 +1,40 @@
+{
+  "name": "rmlines",
+  "version": "0.1.0",
+  "description": "Streaming line remover",
+  "license": "MIT",
+  "repository": "t1st3/rmlines",
+  "author": {
+    "name": "t1st3",
+    "email": "contact@tiste.org",
+    "url": "tiste.org"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "line",
+    "remove",
+    "stream"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "*",
+    "concat-stream": "^1.5.2",
+    "coveralls": "^2.11.14",
+    "nyc": "^8.4.0",
+    "xo": "*"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}
