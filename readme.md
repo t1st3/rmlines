@@ -1,4 +1,4 @@
-# rmlines ([![Build Status Travis](https://travis-ci.org/t1st3/rmlines.svg?branch=master)](https://travis-ci.org/t1st3/rmlines)) ([![Coverage Status](https://coveralls.io/repos/github/t1st3/rmlines/badge.svg?branch=master)](https://coveralls.io/github/t1st3/rmlines?branch=master))
+# rmlines [![Build Status Travis](https://travis-ci.org/t1st3/rmlines.svg?branch=master)](https://travis-ci.org/t1st3/rmlines) [![Coverage Status](https://coveralls.io/repos/github/t1st3/rmlines/badge.svg?branch=master)](https://coveralls.io/github/t1st3/rmlines?branch=master)
 
 > Streaming line remover
 
