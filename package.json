@@ -31,7 +31,7 @@
     "concat-stream": "^1.5.2",
     "coveralls": "^2.11.14",
     "nyc": "^10.0.0",
-    "xo": "*"
+    "xo": "0.18.0"
   },
   "nyc": {
     "reporter": [
