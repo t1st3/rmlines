@@ -29,7 +29,7 @@
   "devDependencies": {
     "ava": "*",
     "concat-stream": "^1.5.2",
-    "coveralls": "^2.11.14",
+    "coveralls": "^2.13.0",
     "nyc": "^10.0.0",
     "xo": "*"
   },
