@@ -1,7 +1,7 @@
 'use strict';
 
-var StringDecoder = require('string_decoder').StringDecoder;
-var through = require('through2');
+const StringDecoder = require('string_decoder').StringDecoder;
+const through = require('through2');
 
 function transform(chunk, enc, cb) {
 	this._last += this._decoder.write(chunk);
@@ -9,11 +9,11 @@ function transform(chunk, enc, cb) {
 		return cb(new Error('maximum buffer reached'));
 	}
 
-	var list = this._last.split('\n');
+	const list = this._last.split('\n');
 
 	this._last = list.pop();
 
-	for (var i = 0; i < list.length; i++) {
+	for (let i = 0; i < list.length; i++) {
 		this.count += 1;
 		if (this.lines.indexOf(this.count) === -1) {
 			this.push(list[i] + '\n');
@@ -24,7 +24,7 @@ function transform(chunk, enc, cb) {
 }
 
 function flush(cb) {
-	// forward any gibberish left in there
+	// Forward any gibberish left in there
 	this._last += this._decoder.end();
 
 	if (this._last) {
@@ -37,9 +37,9 @@ function flush(cb) {
 function rmlines(lines, options) {
 	options = options || {};
 
-	var stream = through(options, transform, flush);
+	const stream = through(options, transform, flush);
 
-	// this stream is in objectMode only in the readable part
+	// This stream is in objectMode only in the readable part
 	stream._readableState.objectMode = true;
 
 	stream._last = '';

@@ -31,10 +31,10 @@ test('removes 2nd line from a buffer', async t => {
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
 	}));
-	let txt = [
+	const txt = [
 		'abc', 'def', 'ghi', 'jkl'
 	].join('\n');
-	await rmlines.end(new Buffer(txt));
+	await rmlines.end(Buffer.from(txt));
 });
 
 test('removes lines 1, 3 and 5', async t => {
@@ -82,7 +82,7 @@ test('errors on maximum buffer limit', t => {
 	const txt = [
 		'abc', 'def', 'ghi', 'jkl'
 	].join('\n');
-	t.throws(function () {
+	t.throws(() => {
 		rmlines.write(txt);
 	});
 });
