@@ -21,8 +21,8 @@ test('removes 1st line of a 1-liner', async t => {
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
 	}));
-	const txt = 'abc';
-	await rmlines.write(txt);
+	const txt = 'abc\n';
+	await rmlines.end(txt);
 });
 
 test('removes 2nd line from a buffer', async t => {
