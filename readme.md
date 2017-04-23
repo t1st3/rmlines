@@ -1,5 +1,7 @@
 # rmlines [![Build Status Travis](https://travis-ci.org/t1st3/rmlines.svg?branch=master)](https://travis-ci.org/t1st3/rmlines) [![Coverage Status](https://coveralls.io/repos/github/t1st3/rmlines/badge.svg?branch=master)](https://coveralls.io/github/t1st3/rmlines?branch=master)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/t1st3/rmlines.svg)](https://greenkeeper.io/)
+
 > Streaming line remover
 
 `rmlines` is a [Transform stream](https://nodejs.org/api/stream.html#stream_duplex_and_transform_streams) that remove lines (based on line numbers) from any string.
