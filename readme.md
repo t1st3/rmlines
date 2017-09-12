@@ -67,4 +67,4 @@ as described above
 
 ## License
 
-MIT © [t1st3](http://tiste.org)
+MIT © [t1st3](https://t1st3.com)
