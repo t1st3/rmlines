@@ -27,7 +27,7 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.23.0",
     "codecov": "^3.0.0",
     "concat-stream": "^1.6.0",
     "nyc": "^11.0.1",
