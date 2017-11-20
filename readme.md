@@ -1,4 +1,4 @@
-# rmlines [![Build Status Travis](https://travis-ci.org/t1st3/rmlines.svg?branch=master)](https://travis-ci.org/t1st3/rmlines) [![Coverage Status](https://coveralls.io/repos/github/t1st3/rmlines/badge.svg?branch=master)](https://coveralls.io/github/t1st3/rmlines?branch=master)
+# rmlines [![Build Status Travis](https://travis-ci.org/t1st3/rmlines.svg?branch=master)](https://travis-ci.org/t1st3/rmlines) [![codecov](https://codecov.io/gh/t1st3/rmlines/badge.svg?branch=master)](https://codecov.io/gh/t1st3/rmlines?branch=master)
 
 > Streaming line remover
 
@@ -63,6 +63,13 @@ The number(s) of the line(s) that must be removed.
 
 Type: `object`<br>
 as described above
+
+
+## Related
+
+* [rmlines-cli](https://github.com/t1st3/rmlines-cli) | CLI for rmlines
+* [gulp-rmlines](https://github.com/t1st3/gulp-rmlines) | rmlines as a [`gulp`](http://gulpjs.com/) plugin
+* [gulp-rmlines](https://github.com/t1st3/grunt-rmlines) | rmlines as a [`Grunt`](http://gruntjs.com/) plugin
 
 
 ## License
