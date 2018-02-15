@@ -1,6 +1,6 @@
 import test from 'ava';
 import concatStream from 'concat-stream';
-import fn from './';
+import fn from '.';
 
 test('removes 3rd line', async t => {
 	const expected = 'abc\ndef\njkl\n';
