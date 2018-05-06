@@ -1,6 +1,6 @@
 'use strict';
 
-const StringDecoder = require('string_decoder').StringDecoder;
+const {StringDecoder} = require('string_decoder');
 const through = require('through2');
 
 function transform(chunk, enc, cb) {
