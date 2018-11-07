@@ -24,7 +24,7 @@
     "stream"
   ],
   "dependencies": {
-    "through2": "^2.0.3"
+    "through2": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
