@@ -2,79 +2,85 @@ import test from 'ava';
 import concatStream from 'concat-stream';
 import fn from '.';
 
-test('removes 3rd line', async t => {
+test.cb('removes 3rd line', t => {
 	const expected = 'abc\ndef\njkl\n';
 	const rmlines = fn(3);
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
+		t.end();
 	}));
 	let txt = [
 		'abc', 'def', 'ghi', 'jkl'
 	].join('\n');
 	txt += '\n';
-	await rmlines.end(txt);
+	rmlines.end(txt);
 });
 
-test('removes 1st line of a 1-liner', async t => {
+test.cb('removes 1st line of a 1-liner', t => {
 	const expected = '';
 	const rmlines = fn(1);
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
+		t.end();
 	}));
 	const txt = 'abc\n';
-	await rmlines.end(txt);
+	rmlines.end(txt);
 });
 
-test('removes 2nd line from a buffer', async t => {
+test.cb('removes 2nd line from a buffer', t => {
 	const expected = 'abc\nghi\njkl';
 	const rmlines = fn(2);
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
+		t.end();
 	}));
 	const txt = [
 		'abc', 'def', 'ghi', 'jkl'
 	].join('\n');
-	await rmlines.end(Buffer.from(txt));
+	rmlines.end(Buffer.from(txt));
 });
 
-test('removes lines 1, 3 and 5', async t => {
+test.cb('removes lines 1, 3 and 5', t => {
 	const expected = 'def\njkl\npqr';
 	const rmlines = fn([1, 3, 5]);
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
+		t.end();
 	}));
 	const txt = [
 		'abc', 'def', 'ghi', 'jkl', 'mno', 'pqr'
 	].join('\n');
 	rmlines.write(txt);
-	await rmlines.end();
+	rmlines.end();
 });
 
-test('preserves empty lines', async t => {
+test.cb('preserves empty lines', t => {
 	const expected = 'abc\n\ndef\nghi\n\njkl\n\n\n';
 	const rmlines = fn([4]);
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
+		t.end();
 	}));
 	const txt = [
 		'abc', 'def', 'ghi', 'jkl'
 	].join('\n\n');
 	rmlines.write(txt + '\n\n\n');
-	await rmlines.end();
+	rmlines.end();
 });
 
-test('handles multiple writes', async t => {
+test.cb('handles multiple writes', t => {
 	const expected = 'abc\ndef\njkl';
 	const rmlines = fn(3);
 	rmlines.pipe(concatStream({encoding: 'string'}, data => {
 		t.is(data, expected);
+		t.end();
 	}));
 	let txt = 'abc\nde';
 	rmlines.write(txt);
 	txt = 'f\ng';
 	rmlines.write(txt);
 	txt = 'hi\njkl';
-	await rmlines.end(txt);
+	rmlines.end(txt);
 });
 
 test('errors on maximum buffer limit', t => {
