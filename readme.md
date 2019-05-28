@@ -69,7 +69,7 @@ as described above
 
 * [rmlines-cli](https://github.com/t1st3/rmlines-cli) | CLI for rmlines
 * [gulp-rmlines](https://github.com/t1st3/gulp-rmlines) | rmlines as a [`gulp`](http://gulpjs.com/) plugin
-* [gulp-rmlines](https://github.com/t1st3/grunt-rmlines) | rmlines as a [`Grunt`](http://gruntjs.com/) plugin
+* [grunt-rmlines](https://github.com/t1st3/grunt-rmlines) | rmlines as a [`Grunt`](http://gruntjs.com/) plugin
 
 
 ## License
