@@ -13,10 +13,10 @@ function transform(chunk, enc, cb) {
 
 	this._last = list.pop();
 
-	for (let i = 0; i < list.length; i++) {
+	for (const line of list) {
 		this.count += 1;
-		if (this.lines.indexOf(this.count) === -1) {
-			this.push(list[i] + '\n');
+		if (this.lines.includes(this.count) === false) {
+			this.push(line + '\n');
 		}
 	}
 
